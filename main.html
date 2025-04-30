@@ -1,0 +1,177 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Gorillas Fitness Gym</title>
+
+    <link rel="stylesheet" href="mainStyles.css" />
+    <link href="https://fonts.googleapis.com/css2?family=Roboto:wght@400;700&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.0/css/all.min.css">
+</head>
+<body>
+    <header>
+        <div class="logo"><img src="src/logo.png" alt="Logo"></div>
+        <nav>
+          <a href="#">INICIO</a>
+          <a href="#beneficios">BENEFICIOS</a>
+          <a href="#planes">PLANES</a>
+          <a href="contact.html">UBICACIÓN Y CONTACTO</a>
+        </nav>
+      </header>
+    
+      <!-- portada body -->
+
+      <section class="hero" id="parallax">
+        <div class="hero-overlay">
+          <img src="src/logo.png" alt="Logo" class="hero-logo">
+          <h1>¡BIENVENIDO AL MEJOR GYM!</h1>
+          <p>Desde 2017 innovando en Riberalta</p>
+        </div>
+      </section>
+      
+
+    
+      <section class="benefits" id="beneficios">
+        <h2><i class="fas fa-bolt"></i> BENEFICIOS</h2>
+        <p>Por qué elegirnos</p>
+        <div class="benefit-grid">
+          <div class="benefit-item" style="background-image: url('src/beneficio1.avif');">Atención personalizada</div>
+          <div class="benefit-item" style="background-image: url('src/beneficio2.jpg');">Equipos de última generación</div>
+          <div class="benefit-item" style="background-image: url('src/beneficio4.webp');">Ubicación céntrica</div>
+          <div class="benefit-item" style="background-image: url('src/beneficio3.jpg');">Entrenadores certificados</div>
+        </div>
+      </section>
+
+      <!-- planes alaverga --> 
+      <section class="planes" id="planes">
+        <h2><i class="fas fa-dumbbell"></i> PLANES</h2>
+        <div class="plans-container">
+          
+          <div class="plan-card hidden">
+            <h3>Medio Mes (sin caminadora)</h3>
+            <p class="price">Bs. 60</p>
+            <p class="description">15 sesiones con validez de 15 días</p>
+            <ul>
+              <li>Una hora y media de entrenamiento</li>
+              <li>Una sesión por día</li>
+              <li>Acceso a todas las máquinas (excepto caminadoras)</li>
+            </ul>
+          </div>
+      
+          <div class="plan-card hidden">
+            <h3>Medio Mes (con caminadora)</h3>
+            <p class="price">Bs. 120</p>
+            <p class="description">15 sesiones con validez de 15 días</p>
+            <ul>
+              <li>Una hora y media de entrenamiento</li>
+              <li>Una sesión por día</li>
+              <li>Acceso a todas las máquinas (incluyendo caminadoras)</li>
+            </ul>
+          </div>
+      
+          <div class="plan-card hidden">
+            <h3>Mensual</h3>
+            <p class="price">Bs. 120</p>
+            <p class="description">30 sesiones con validez de 30 días</p>
+            <ul>
+              <li>Una hora y media de entrenamiento</li>
+              <li>Una sesión por día</li>
+              <li>Acceso a todas las máquinas (excepto caminadoras)</li>
+            </ul>
+          </div>
+      
+          <div class="plan-card hidden">
+            <h3>Mensual (con caminadoras)</h3>
+            <p class="price">Bs. 240</p>
+            <p class="description">30 sesiones con validez de 30 días</p>
+            <ul>
+              <li>Una hora y media de entrenamiento</li>
+              <li>Una sesión por día</li>
+              <li>Acceso a todas las máquinas (incluyendo caminadoras)</li>
+            </ul>
+          </div>
+      
+          <div class="plan-card hidden">
+            <h3>Ejecutivo (sin caminadoras)</h3>
+            <p class="price">Bs. 250</p>
+            <p class="description">30 sesiones con validez por 90 días</p>
+            <ul>
+              <li>Una hora y media de entrenamiento</li>
+              <li>Una sesión por día</li>
+              <li>Acceso a todas las máquinas (excepto caminadoras)</li>
+              <li>Perfecto para personas que no pueden asistir diario</li>
+            </ul>
+          </div>
+      
+          <div class="plan-card hidden">
+            <h3>Ejecutivo (con caminadoras)</h3>
+            <p class="price">Bs. 350</p>
+            <p class="description">30 sesiones con validez por 90 días</p>
+            <ul>
+              <li>Una hora y media de entrenamiento</li>
+              <li>Una sesión por día</li>
+              <li>Acceso a todas las máquinas (incluyendo caminadoras)</li>
+              <li>Perfecto para personas que no pueden asistir diario</li>
+            </ul>
+          </div>
+      
+        </div>
+      </section>
+      
+      
+    
+      <footer class="footer">
+        <div class="logo"><img src="src/logo.png" alt="Logo"></div>
+        <div class="footer-info">
+          <h3>Horarios de atención</h3>
+          <p>Lun-Vie: 6:00 - 22:00</p>
+          <p>Sab: 8:00 - 18:00</p>
+        </div>
+      </footer>
+    <!-- SCRIPTS del scroll-->
+      <script>
+        const observer = new IntersectionObserver((entries) => {
+          entries.forEach(entry => {
+            if (entry.isIntersecting) {
+              entry.target.classList.add('visible');
+            }
+          });
+        }, {
+          threshold: 1
+        });
+    
+        document.querySelectorAll('.benefit-item').forEach(item => {
+          observer.observe(item);
+        });
+      </script>
+
+      <script>
+        window.addEventListener('scroll', () => {
+          const parallax = document.getElementById('parallax');
+          let offset = window.scrollY * 0.5;
+          parallax.style.backgroundPositionY = offset + 'px';
+        });
+      </script>
+
+      <script>
+       const cards = document.querySelectorAll('.plan-card');
+
+const cardObserver = new IntersectionObserver(entries => {
+  entries.forEach(entry => {
+    if (entry.isIntersecting) {
+      entry.target.classList.add('show');
+      entry.target.classList.remove('hidden');
+    }
+  });
+}, {
+  threshold: 0.1
+});
+
+cards.forEach(card => {
+  cardObserver.observe(card);
+});
+
+      </script>
+</body>
+</html>
