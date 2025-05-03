@@ -42,7 +42,7 @@
   .hero {
     position: relative;
     height: 100vh;
-    background-image: url('src/fondo-gym.jpeg'); /* nombre de tu imagen */
+    background-image: url('src/mainGym.jpeg'); /* nombre de tu imagen */
     background-size: cover;
     background-position: center;
     background-repeat: no-repeat;
@@ -217,20 +217,20 @@
   .plan-card:nth-child(4) {
     transition-delay: 0.8s;
   }
-  .plan-card:nth-child(3) {
-    transition-delay: 0.10s;
+  .plan-card:nth-child(5) {
+    transition-delay: 1s;
   }
-  .plan-card:nth-child(3) {
-    transition-delay: 0.12s;
+  .plan-card:nth-child(6) {
+    transition-delay: 1.2s;
   }
-  .plan-card:nth-child(3) {
-    transition-delay: 0.14s;
+  .plan-card:nth-child(7) {
+    transition-delay: 1.4s;
   }
-  .plan-card:nth-child(3) {
-    transition-delay: 0.16s;
+  .plan-card:nth-child(8) {
+    transition-delay: 1.6s;
   }
-  .plan-card:nth-child(3) {
-    transition-delay: 0.18s;
+  .plan-card:nth-child(9) {
+    transition-delay: 1.8s;
   }
   
   .footer {
@@ -250,6 +250,11 @@
   }
   .footer-info {
     font-size: 0.9rem;
+  }
+  .watermark {
+    font-size: 0.75rem;
+    opacity: 0.4;
+    margin-top: 5px;
   }
   .footer-info h3 {
     font-size: 1.1rem;
